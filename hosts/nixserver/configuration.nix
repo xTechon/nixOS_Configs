@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       /etc/nixos/modules/sshd.nix
-      /etc/nixos/personal/user.nix
+      /etc/nixos/users
       /etc/nixos/package-list.nix
     ];
 

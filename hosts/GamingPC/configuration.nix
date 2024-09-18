@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
-      /etc/nixos/personal/user.nix
+      /etc/nixos/users/daniel.nix
       /etc/nixos/package-list.nix
       /etc/nixos/modules
     ];
