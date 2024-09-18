@@ -14,12 +14,12 @@
         extraOptions = [
             "--restart=always"
         ];
-        environment = {
-            INITIAL_USER = "svc-admin";
-            INITIAL_PASSWORD = "12345"; # SET PASSWORD AFTER STARTUP!!!
-            INITIAL_EMAIL = "danielhiromoto@outlook.com";
-            INITIAL_SERVER_URL = "http://onedev.techLab.ddnsfree.com";
-
-        };
+        #environment = {
+        #    INITIAL_USER = "svc-admin";
+        #    INITIAL_PASSWORD = "12345"; # SET PASSWORD AFTER STARTUP!!!
+        #    INITIAL_EMAIL = "danielhiromoto@outlook.com";
+        #    INITIAL_SERVER_URL = "http://onedev.techLab.ddnsfree.com";
+        #
+        #};
     };
 }
