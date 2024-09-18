@@ -15,6 +15,7 @@
    home = "/home/daniel";
    openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILawLTLq9KyGsa4RvQSdExHaOgkcCgCiBRi9r5dZwPif daniel@DellXPS13"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAbH/JNOuvv3/rb87XPtxeBbtUFUXlnWcNcTdhNLw/55 daniel@GamingPC"
    ];
   };
 }
