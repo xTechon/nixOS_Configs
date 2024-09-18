@@ -7,10 +7,10 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./personal/user.nix
-      ./package-list.nix
-      ./modules
+      /etc/nixos/hardware-configuration.nix
+      /etc/nixos/personal/user.nix
+      /etc/nixos/package-list.nix
+      /etc/nixos/modules
     ];
 
   nixpkgs.config.allowUnfree = true;
