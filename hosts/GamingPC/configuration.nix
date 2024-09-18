@@ -11,6 +11,7 @@
       /etc/nixos/users/daniel.nix
       /etc/nixos/package-list.nix
       /etc/nixos/modules
+      /etc/nixos/servers/onedev.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
@@ -94,10 +95,11 @@
     enableSSHSupport = true;
   };
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  virtualisation.docker = {
+      enable = true;
+      enableOnBoot = true;
+  };
+  virtualisation.oci-containers.backend = "docker";
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

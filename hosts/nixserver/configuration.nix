@@ -55,11 +55,12 @@
 
   };
 
-  virtualisation.podman = {
+  virtualisation.docker = {
       enable = true;
-      dockerSocket.enable = true;
-      dockerCompat = true;
+      enableOnBoot = true;
   };
+  virtualisation.oci-containers.backend = "docker";
+
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";

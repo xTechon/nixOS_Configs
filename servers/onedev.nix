@@ -1,6 +1,6 @@
 {...}:
 {
-    virtualisation.oci-containers.containers.onedev = {
+    config.virtualisation.oci-containers.containers.onedev = {
         image = "1dev/server";
         autoStart = true;
         ports = [
@@ -11,9 +11,9 @@
             "/var/run/docker.sock:/var/run/docker.sock"
             "/var/docker/onedev:/opt/onedev"
         ];
-        extraOptions = [
-            "--restart=always"
-        ];
+        #extraOptions = [
+        #    "--restart=always"
+        #];
         #environment = {
         #    INITIAL_USER = "svc-admin";
         #    INITIAL_PASSWORD = "12345"; # SET PASSWORD AFTER STARTUP!!!
