@@ -2,6 +2,7 @@
 {
     virtualisation.oci-containers.containers.onedev = {
         image = "1dev/server";
+        autoStart = true;
         ports = [
             "6610:6610"
             "6611:6611"
