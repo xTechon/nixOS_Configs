@@ -59,7 +59,7 @@
       enable = true;
       dockerSocket.enable = true;
       dockerCompat = true;
-  }
+  };
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
