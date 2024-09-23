@@ -11,7 +11,6 @@
       /etc/nixos/modules/sshd.nix
       /etc/nixos/users
       /etc/nixos/package-list.nix
-      /etc/nixos/servers/onedev.nix
     ];
 
   nixpkgs.config.allowUnfree = true;

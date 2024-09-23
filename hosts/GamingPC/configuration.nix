@@ -11,7 +11,6 @@
       /etc/nixos/users/daniel.nix
       /etc/nixos/package-list.nix
       /etc/nixos/modules
-      /etc/nixos/servers/onedev.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
