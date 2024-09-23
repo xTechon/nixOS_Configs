@@ -1,5 +1,7 @@
 {...}: {
 
+  imports = [ "/etc/nixos/users/containers.nix" ];
+
   users.groups.daniel = {};
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.daniel = {
@@ -11,6 +13,7 @@
       "networkmanager"
       "users"
       "pipewire"
+      "containers"
       ];
    home = "/home/daniel";
    openssh.authorizedKeys.keys = [

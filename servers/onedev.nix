@@ -1,5 +1,12 @@
 {...}:
 {
+  # make sure containers user/group exists
+  imports = [ "/etc/nixos/users/containers.nix" ];
+
+  # make sure folders for volumes exist with permisions
+  systemd.tmpfiles.rules = [
+    "d /var/Containers/onedev 0770 containers containers -"
+  ];
     config.virtualisation.oci-containers.containers.onedev = {
         image = "1dev/server";
         autoStart = true;
@@ -9,7 +16,7 @@
         ];
         volumes = [
             "/var/run/docker.sock:/var/run/docker.sock"
-            "/var/docker/onedev:/opt/onedev"
+            "/var/Containers/onedev:/opt/onedev"
         ];
         #extraOptions = [
         #    "--restart=always"
