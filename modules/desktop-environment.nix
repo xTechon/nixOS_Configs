@@ -3,7 +3,7 @@
 { pkgs, ... }:
 {
     services.desktopManager.plasma6.enable = true;
-
+    programs.kdeconnect.enable = true;
 
     environment.systemPackages =
     with pkgs;
@@ -13,7 +13,7 @@
         krfb
         krdc
         mpc-qt
-        kdeconnect-kde
+        #kdeconnect-kde
 
         firefox
         discord
