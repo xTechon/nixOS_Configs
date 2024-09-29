@@ -13,6 +13,7 @@
         krfb
         krdc
         mpc-qt
+        kdeconnect-kde
 
         firefox
         discord
