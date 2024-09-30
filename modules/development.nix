@@ -9,6 +9,9 @@
                     bbenoist.nix
                     arrterian.nix-env-selector
                     ms-python.python
+                    ms-python.debugpy
+                    ms-python.vscode-pylance
+                    ms-python.pylint
                     yzhang.markdown-all-in-one
                     ms-azuretools.vscode-docker
                     ms-vscode-remote.remote-ssh
