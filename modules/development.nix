@@ -15,6 +15,8 @@
                     yzhang.markdown-all-in-one
                     ms-azuretools.vscode-docker
                     ms-vscode-remote.remote-ssh
+                    xaver.clang-format
+                    llvm-vs-code-extensions.vscode-clangd
                 ];
             })
             python312Packages.python-lsp-server
