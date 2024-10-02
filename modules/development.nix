@@ -18,6 +18,7 @@
                     xaver.clang-format
                     llvm-vs-code-extensions.vscode-clangd
                     asvetliakov.vscode-neovim
+                    vadimcn.vscode-lldb
                 ];
             })
             python312Packages.python-lsp-server
