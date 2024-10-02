@@ -17,8 +17,10 @@
                     ms-vscode-remote.remote-ssh
                     xaver.clang-format
                     llvm-vs-code-extensions.vscode-clangd
+                    asvetliakov.vscode-neovim
                 ];
             })
             python312Packages.python-lsp-server
         ];
+    programs.neovim.enable = true;
 }
