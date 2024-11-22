@@ -23,5 +23,10 @@
 
     # make sure the firefox plasma integration works
     programs.firefox.nativeMessagingHosts.packages = [pkgs.kdePackages.plasma-browser-integration];
+    
+    security.pam.services.kwallet = {
+        name = "kwallet";
+        enableKwallet = true;
+    };
 
 }
