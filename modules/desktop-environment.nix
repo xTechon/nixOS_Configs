@@ -13,6 +13,7 @@
         krfb
         krdc
         mpc-qt
+        ksshaskpass
         #kdeconnect-kde
 
         firefox
