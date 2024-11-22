@@ -19,6 +19,7 @@
                     llvm-vs-code-extensions.vscode-clangd
                     asvetliakov.vscode-neovim
                     vadimcn.vscode-lldb
+                    jnoortheen.nix-ide
                 ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "explicit-folding";
