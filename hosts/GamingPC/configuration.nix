@@ -42,6 +42,20 @@
     # useXkbConfig = true; # use xkb.options in tty.
   };
 
+  # make sure /etc/nixos/* files can be edited by wheel group
+  systemd.tmpfiles.settings = {
+    "10-mypackage" = {
+      "/etc/nixos" = {
+        Z = {
+          mode = "0775";
+          user = "root";
+          group = "wheel";
+          age = "-";
+        };
+      };
+    };
+  };
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
