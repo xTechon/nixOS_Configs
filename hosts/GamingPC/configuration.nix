@@ -20,8 +20,8 @@
       /etc/nixos/package-list.nix
       /etc/nixos/modules
       /etc/nixos/secrets/secrets.nix
-      /etc/nixos/servers/gitea.nix
-      /etc/nixos/servers/nginx.nix
+      #/etc/nixos/servers/gitea.nix
+      #/etc/nixos/servers/nginx.nix
     ];
 
   nixpkgs.config.allowUnfree = true;

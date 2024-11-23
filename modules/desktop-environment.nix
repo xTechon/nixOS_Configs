@@ -12,13 +12,9 @@
       kcalc
       krfb
       krdc
-      mpc-qt
       ksshaskpass
       #kdeconnect-kde
 
-      firefox
-      discord
-      spotube
     ];
 
   # make sure the firefox plasma integration works
