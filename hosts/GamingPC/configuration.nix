@@ -5,13 +5,23 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports =
-    [
+  imports = let 
+  commit = "53c853fb1a7e4f25f68805ee25c83d5de18dc699";
+  in [
+    "${builtins.fetchTarball {
+      url = "https://github.com/Mic92/sops-nix/archive/${commit}.tar.gz";
+      # replace this with an actual hash
+      sha256 = "N9JGWe/T8BC0Tss2Cv30plvZUYoiRmykP7ZdY2on2b0=";
+    }}/modules/sops"
+  ] ++ [
       # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       /etc/nixos/users/daniel.nix
       /etc/nixos/package-list.nix
       /etc/nixos/modules
+      /etc/nixos/secrets/secrets.nix
+      /etc/nixos/servers/gitea.nix
+      /etc/nixos/servers/nginx.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
@@ -96,6 +106,7 @@
     qbittorrent
     nix-search-cli
     nixpkgs-fmt
+    sops
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
