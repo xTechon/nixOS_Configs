@@ -12,7 +12,6 @@
       /etc/nixos/users/daniel.nix
       /etc/nixos/package-list.nix
       /etc/nixos/modules
-      /etc/nixos/servers/gitea.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
