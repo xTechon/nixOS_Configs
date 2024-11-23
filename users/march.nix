@@ -1,6 +1,6 @@
-{...}: {
+{ ... }: {
 
-  users.groups.march = {};
+  users.groups.march = { };
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.march = {
     isNormalUser = true;
@@ -10,9 +10,9 @@
       "networkmanager"
       "users"
       "pipewire"
-      ];
-   home = "/home/march";
-   openssh.authorizedKeys.keys = [
-   ];
+    ];
+    home = "/home/march";
+    openssh.authorizedKeys.keys = [
+    ];
   };
 }

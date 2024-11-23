@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       /etc/nixos/users/daniel.nix
       /etc/nixos/package-list.nix
@@ -29,7 +30,7 @@
 
   networking.hostName = "GamingPC"; # Define your hostname.
   # Pick only one of the below networking options.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -62,7 +63,7 @@
   services.desktopManager.plasma6.enable = true;
   services.xserver.excludePackages = with pkgs; [ xterm ];
 
-  
+
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -77,10 +78,10 @@
   services.libinput.enable = true;
 
   users.users.daniel = {
-      packages = with pkgs; [
-        #firefox
-        tree
-      ];
+    packages = with pkgs; [
+      #firefox
+      tree
+    ];
   };
 
   # List packages installed in system profile. To search, run:
@@ -95,6 +96,7 @@
     openconnect
     qbittorrent
     nix-search-cli
+    nixpkgs-fmt
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -106,8 +108,8 @@
   };
 
   virtualisation.docker = {
-      enable = true;
-      enableOnBoot = true;
+    enable = true;
+    enableOnBoot = true;
   };
   virtualisation.oci-containers.backend = "docker";
 

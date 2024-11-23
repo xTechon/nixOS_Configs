@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       /etc/nixos/modules/sshd.nix
       /etc/nixos/users
@@ -22,7 +23,7 @@
   networking.hostName = "nixserver"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -42,21 +43,21 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = false;
   services.xserver = {
-      enable = true;
-      autorun = false;
-      displayManager.startx.enable = true;
+    enable = true;
+    autorun = false;
+    displayManager.startx.enable = true;
 
-      exportConfiguration = true;
+    exportConfiguration = true;
 
-      excludePackages = with pkgs; [
-        xterm
-      ];
+    excludePackages = with pkgs; [
+      xterm
+    ];
 
   };
 
   virtualisation.docker = {
-      enable = true;
-      enableOnBoot = true;
+    enable = true;
+    enableOnBoot = true;
   };
   virtualisation.oci-containers.backend = "docker";
 
@@ -88,9 +89,9 @@
   # started in user sessions.
   # programs.mtr.enable = true;
   programs.gnupg.agent = {
-     enable = true;
-     enableSSHSupport = true;
-   };
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   # List services that you want to enable:
 

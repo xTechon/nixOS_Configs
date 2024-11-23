@@ -2,31 +2,31 @@
 
 { pkgs, ... }:
 {
-    services.desktopManager.plasma6.enable = true;
-    programs.kdeconnect.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  programs.kdeconnect.enable = true;
 
-    environment.systemPackages =
+  environment.systemPackages =
     with pkgs;
     with kdePackages; [
-        plasma-browser-integration
-        kcalc
-        krfb
-        krdc
-        mpc-qt
-        ksshaskpass
-        #kdeconnect-kde
+      plasma-browser-integration
+      kcalc
+      krfb
+      krdc
+      mpc-qt
+      ksshaskpass
+      #kdeconnect-kde
 
-        firefox
-        discord
-        spotube
+      firefox
+      discord
+      spotube
     ];
 
-    # make sure the firefox plasma integration works
-    programs.firefox.nativeMessagingHosts.packages = [pkgs.kdePackages.plasma-browser-integration];
-    
-    security.pam.services.kwallet = {
-        name = "kwallet";
-        enableKwallet = true;
-    };
+  # make sure the firefox plasma integration works
+  programs.firefox.nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
+
+  security.pam.services.kwallet = {
+    name = "kwallet";
+    enableKwallet = true;
+  };
 
 }
