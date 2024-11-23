@@ -31,5 +31,7 @@
       })
       python312Packages.python-lsp-server
     ];
+  
+  # neovim
   programs.neovim.enable = true;
 }

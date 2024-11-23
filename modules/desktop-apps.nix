@@ -1,9 +1,13 @@
 # general packages to be installed independent of DE
-{pkgs, ...}:
+{ pkgs, ... }:
 {
-  environment.systemPackages = 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-27.3.11" # required for logseq
+  ];
+
+  environment.systemPackages =
     with pkgs; [
-  
+
       firefox
       discord
       spotube
