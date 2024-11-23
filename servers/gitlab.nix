@@ -1,3 +1,4 @@
+{ ... }:
 {
   services.gitlab = {
     enable = true;
@@ -27,5 +28,11 @@
         default_projects_features = { builds = false; };
       };
     };
+  };
+
+  services.nginx.virtualHosts."git.example.com" = {
+    enableACME = false;
+    forceSSL = true;
+    locations."/".proxyPass = "http://unix:/run/gitlab/gitlab-workhorse.socket";
   };
 }
