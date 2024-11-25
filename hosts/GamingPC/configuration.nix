@@ -36,6 +36,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.systemd.enable = true;
+  
+  # turn on bluetooth
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
   networking.hostName = "GamingPC"; # Define your hostname.
   # Pick only one of the below networking options.
