@@ -20,8 +20,9 @@
       /etc/nixos/package-list.nix
       /etc/nixos/modules
       /etc/nixos/secrets/secrets.nix
-      #/etc/nixos/servers/gitea.nix
-      #/etc/nixos/servers/nginx.nix
+      # use home-manager
+      #<home-manager/nixos>
+      /etc/nixos/home_manager/daniel.nix 
     ];
 
   nixpkgs.config.allowUnfree = true;
