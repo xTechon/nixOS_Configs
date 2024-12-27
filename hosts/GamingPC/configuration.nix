@@ -21,7 +21,6 @@
       /etc/nixos/modules
       /etc/nixos/secrets/secrets.nix
       # use home-manager
-      #<home-manager/nixos>
       /etc/nixos/home_manager/daniel.nix 
     ];
 
