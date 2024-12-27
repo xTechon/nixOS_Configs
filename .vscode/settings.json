@@ -1,0 +1,19 @@
+{
+    "explicitFolding.rules": {
+        "nix": [
+            {
+                "beginRegex" : "{",
+                "endRegex" : "}"
+            },
+            {
+                "beginRegex" : "\\[",
+                "endRegex" : "\\]"
+            },
+            {
+                "beginRegex" : ".*let\\s*\\n",
+                "middleRegex": "in.*\\n",
+                "endRegex" : ";"
+            }
+        ]
+    }
+}
