@@ -40,7 +40,7 @@
       userName = "W. Daniel Hiromoto";
       signing = {
         key = "827FA8540F6415E2"; #just the key ID, will have to upload key manually
-        signByDefault = "true";
+        signByDefault = true;
       };
     };
   };
