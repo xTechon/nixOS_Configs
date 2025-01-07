@@ -13,9 +13,7 @@
       krfb
       krdc
       ksshaskpass
-      #kdeconnect-kde
       plasma-panel-colorizer
-      #krunner-vscodeprojects
       vscode-runner
 
     ];

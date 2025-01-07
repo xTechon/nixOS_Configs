@@ -14,6 +14,7 @@
       "users"
       "pipewire"
       "containers"
+      "docker"
     ];
     home = "/home/daniel";
     openssh.authorizedKeys.keys = [
