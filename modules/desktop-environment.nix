@@ -15,7 +15,8 @@
       ksshaskpass
       plasma-panel-colorizer
       vscode-runner
-
+      partitionmanager
+      plasma-vault
     ];
 
   # make sure the firefox plasma integration works

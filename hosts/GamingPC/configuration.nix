@@ -5,7 +5,9 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = let 
+  imports =
+
+  let
   commit = "53c853fb1a7e4f25f68805ee25c83d5de18dc699";
   in [
     "${builtins.fetchTarball {
@@ -13,15 +15,16 @@
       # replace this with an actual hash
       sha256 = "N9JGWe/T8BC0Tss2Cv30plvZUYoiRmykP7ZdY2on2b0=";
     }}/modules/sops"
-  ] ++ [
+  ] ++
+  [
       # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
-      /etc/nixos/users/daniel.nix
-      /etc/nixos/package-list.nix
-      /etc/nixos/modules
-      /etc/nixos/secrets/secrets.nix
+      ./hardware-configuration.nix
+      ../../users/daniel.nix
+      ../../package-list.nix
+      ../../modules
+      ../../secrets/secrets.nix
       # use home-manager
-      /etc/nixos/home_manager/daniel.nix 
+      ../../home_manager/daniel.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
@@ -108,7 +111,7 @@
     qbittorrent
     nix-search-cli
     nixpkgs-fmt
-    sops
+
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -1,6 +1,8 @@
 { ... }: {
 
-  imports = [ "/etc/nixos/users/containers.nix" ];
+
+
+  #imports = [ import builtins.baseNameOf "./containers.nix" ];
 
   users.groups.daniel = { };
   # Define a user account. Don't forget to set a password with ‘passwd’.
