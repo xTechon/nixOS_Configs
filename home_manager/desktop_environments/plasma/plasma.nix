@@ -14,6 +14,7 @@
 
     workspace = {
       enableMiddleClickPaste = false;
+      lookAndFeel = "org.kde.breezedark.desktop";
     };
     
     krunner.position = "center";
