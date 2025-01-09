@@ -42,6 +42,9 @@
         key = "827FA8540F6415E2"; #just the key ID, will have to upload key manually
         signByDefault = true;
       };
+      extraConfig = {
+        safe.directory = [ "/etc/nixos" ];
+      };
     };
   };
 }
