@@ -71,6 +71,25 @@
      enable = true;
      #enableSSHSupport = true;
   };
+  
+  # nix store cleanup
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+  
+  # nix optimization schedule
+  nix.optimise = {
+    automatic = true;
+    dates = [ "weekly" ];
+  };
+
+  # make sure the garbage collection runs to free up to 8GB if running low on space
+  nix.extraOptions = ''
+    min-free = ${toString (100 * 1024 * 1024)}
+    max-free = ${toString (8192 * 1024 * 1024)}
+  '';
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
