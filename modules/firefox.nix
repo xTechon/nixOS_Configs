@@ -54,7 +54,6 @@
           "jid1-MnnxcxisBPnSXQ@jetpack" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
             installation_mode = "force_installed";
-            default-area = "menupanel";
           };
           # 1Password:
           "{d634138d-c276-4fc8-924b-40a0ea21d284}" = {
@@ -68,12 +67,16 @@
             installation_mode = "force_installed";
             default-area = "navbar";
           };
-          default-area = "navbar";
           # Youtube Sponsorblock:
           "sponsorBlocker@ajay.app" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
             installation_mode = "force_installed";
-            default-area = "menupanel";
+          };
+          # Simple Tab Groups
+          "simple-tab-groups@drive4ik" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/simple-tab-groups/latest.xpi";
+            installation_mode = "force_installed";
+            default-area = "navbar";
           };
 
         };
