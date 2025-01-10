@@ -9,7 +9,6 @@
   environment.systemPackages =
     with pkgs; [
 
-      firefox
       discord
       spotube
       mpc-qt
