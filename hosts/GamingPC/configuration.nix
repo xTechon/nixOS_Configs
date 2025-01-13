@@ -21,7 +21,7 @@
       ./hardware-configuration.nix
       ../../users/daniel.nix
       ../../package-list.nix
-      ../../gpu/nvidia.nix
+      ../../hardware/gpu/nvidia.nix
       ../../modules
       ../../secrets/secrets.nix
       # use home-manager

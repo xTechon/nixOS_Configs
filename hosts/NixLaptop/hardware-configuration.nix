@@ -3,7 +3,8 @@
 {
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
-    ../../gpu/tiger-lake-gpu.nix
+    ../../hardware/gpu/tiger-lake-gpu.nix
+    ../../hardware/tpm.nix
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "rtsx_pci_sdmmc" ];
