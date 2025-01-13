@@ -13,7 +13,6 @@
       spotube
       mpc-qt
       #logseq
-      
-      exfatprogs
+      qbittorrent
     ];
 }
