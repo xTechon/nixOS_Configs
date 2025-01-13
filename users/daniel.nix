@@ -17,6 +17,7 @@
       "pipewire"
       "containers"
       "docker"
+      "tss" # tss group has access to TPM devices
     ];
     home = "/home/daniel";
     openssh.authorizedKeys.keys = [
