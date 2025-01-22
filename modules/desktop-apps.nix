@@ -11,7 +11,7 @@
 
       discord
       spotube
-      mpc-qt
+      haruna
       #logseq
       qbittorrent
     ];
