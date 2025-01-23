@@ -7,6 +7,7 @@
     ./shortcuts.nix
     ./panels.nix
     ./hotkeys.nix
+    ./konsole.nix
   ];
 
   programs.plasma = {
