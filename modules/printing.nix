@@ -2,7 +2,7 @@
 {
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  #services.printing.drivers = [ pkgs.epsonscan2.override { withNonFreePlugins = true; withGui = false; } ];
+  services.printing.drivers = [ pkgs.epson-escpr2 ];
 
   # Enable scanning
   hardware.sane.enable = true;
