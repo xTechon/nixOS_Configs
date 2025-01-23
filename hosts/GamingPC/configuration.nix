@@ -81,7 +81,7 @@
   services.xserver.excludePackages = with pkgs; [ xterm ];
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  #services.printing.enable = true;
 
   # Enable sound.
   services.pipewire = {
