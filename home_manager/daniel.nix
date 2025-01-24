@@ -2,21 +2,39 @@
 # sudo nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 # sudo nix-channel --add https://github.com/nix-community/plasma-manager/archive/trunk.tar.gz plasma-manager
 # sudo nix-channel --update
-{ pkgs, ... }:
+{ lib, pkgs, config, ... }:
+
+with lib; 
+let 
+  cfg = config.services;
+  gpgKey = pkgs.fetchurl {
+    url = "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x827fa8540f6415e2";
+    sha256 = "sha256-uqADL61CJMqkDE2wMkdKF9RYgCCF4bM9gUsRhBaXr2o=";
+  };
+in
 {
+  options.services.plasma-manager = {
+    enable = mkEnableOption "Use Plasma-Manager";
+  };
+
+  options.services.gpgAgent = {
+    enable = mkEnableOption "Mange GPG with Home Manager";
+  };
 
   imports = [
     <home-manager/nixos>
   ];
 
-  home-manager.sharedModules = [
+
+  config.home-manager.sharedModules = [] ++ optionals (cfg.plasma-manager.enable) [
     <plasma-manager/modules>
     ./desktop_environments/plasma/plasma.nix
   ];
-  home-manager.useGlobalPkgs = true; # use the system level nixpkgs to avoid NIX_PATH usage
-  home-manager.useUserPackages = true; # install packages to /etc/profiles instead, saves disk space on /home
 
-  home-manager.users.daniel = {
+  config.home-manager.useGlobalPkgs = true; # use the system level nixpkgs to avoid NIX_PATH usage
+  config.home-manager.useUserPackages = true; # install packages to /etc/profiles instead, saves disk space on /home
+
+  config.home-manager.users.daniel = {
     /* The home.stateVersion option does not have a default and must be set */
     home.stateVersion = "24.11";
 
@@ -44,6 +62,18 @@
       };
       extraConfig = {
         safe.directory = [ "/etc/nixos" ];
+      };
+    };
+    programs.gpg = {
+      enable = true;
+      publicKeys = [
+        {source = "${gpgKey}"; trust = 5;}
+      ];
+    };
+    services = mkIf (cfg.gpgAgent.enable) {
+      gpg-agent = {
+        enable = true;
+        pinentryPackage = pkgs.pinentry-tty;
       };
     };
   };
