@@ -4,8 +4,8 @@
 # sudo nix-channel --update
 { lib, pkgs, config, ... }:
 
-with lib; 
-let 
+with lib;
+let
   cfg = config.services;
   gpgKey = pkgs.fetchurl {
     url = "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x827fa8540f6415e2";
@@ -14,9 +14,17 @@ let
 in
 {
   options.services.plasma-manager = {
-    enable = mkEnableOption "Use Plasma-Manager";
+    #enable = mkEnableOption "Plasma-Manager";
+    # make default to true for Plasma-Manager
+    enable = mkOption {
+      type = types.bool;
+      default = true;
+      description = "Whether to enable Plasma-Manager";
+      example = true;
+    };
   };
 
+  # Make default to False for gpg Agent management
   options.services.gpgAgent = {
     enable = mkEnableOption "Mange GPG with Home Manager";
   };
@@ -26,7 +34,7 @@ in
   ];
 
 
-  config.home-manager.sharedModules = [] ++ optionals (cfg.plasma-manager.enable) [
+  config.home-manager.sharedModules = [ ] ++ optionals (cfg.plasma-manager.enable) [
     <plasma-manager/modules>
     ./desktop_environments/plasma/plasma.nix
   ];
@@ -37,6 +45,14 @@ in
   config.home-manager.users.daniel = {
     /* The home.stateVersion option does not have a default and must be set */
     home.stateVersion = "24.11";
+
+    programs.bash = mkIf (cfg.gpgAgent.enable)
+      {
+        enable = true;
+        initExtra = ''
+          export GPG_TTY=$(tty)
+        '';
+      };
 
     # mime app defaults should be set here to prevent collisions
     # if defaults were defined at the app module level (../modules) subsequent additions would-
@@ -67,7 +83,7 @@ in
     programs.gpg = {
       enable = true;
       publicKeys = [
-        {source = "${gpgKey}"; trust = 5;}
+        { source = "${gpgKey}"; trust = 5; }
       ];
     };
     services = mkIf (cfg.gpgAgent.enable) {

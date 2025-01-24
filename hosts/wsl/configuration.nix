@@ -30,14 +30,7 @@
   wsl.enable = true;
   wsl.defaultUser = "daniel";
   wsl.nativeSystemd = true;
-  wsl.startMenuLaunchers = true;
-
-  #services.pcscd.enable = true;
-  #programs.gnupg.agent = {
-  #  enable = true;
-  #  pinentryPackage = pkgs.pinentry-tty;
-  #};
-  #environment.systemPackages = [ pkgs.pinentry-tty ];
+  wsl.startMenuLaunchers = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
