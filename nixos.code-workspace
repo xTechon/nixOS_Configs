@@ -4,5 +4,18 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"nix.enableLanguageServer": true,
+		"nix.serverPath": "nil",
+		"nix.serverSettings": {
+
+			"nil": {
+				"formatting": [
+					"nixpkgs-fmt"
+				]
+			}
+		},
+		"nix.formatterPath": "nixpkgs-fmt",
+		"nixfmt.path": "nixpkgs-fmt"
+	}
 }
