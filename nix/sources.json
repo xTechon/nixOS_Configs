@@ -26,7 +26,6 @@
     },
     "nixpkgs": {
         "branch": "nixos-unstable",
-        "breach": "nixos-unstable",
         "description": "Nix Packages collection",
         "homepage": null,
         "owner": "NixOS",
