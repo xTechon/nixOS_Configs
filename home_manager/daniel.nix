@@ -11,10 +11,11 @@ let
     url = "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x827fa8540f6415e2";
     sha256 = "sha256-uqADL61CJMqkDE2wMkdKF9RYgCCF4bM9gUsRhBaXr2o=";
   };
+  sources = import ../nix/sources.nix;
+  home-manager = "${sources.home-manager}/nixos";
 in
 {
   options.services.plasma-manager = {
-    #enable = mkEnableOption "Plasma-Manager";
     # make default to true for Plasma-Manager
     enable = mkOption {
       type = types.bool;
@@ -30,12 +31,14 @@ in
   };
 
   imports = [
-    <home-manager/nixos>
+    #<home-manager/nixos>
+    home-manager
   ];
 
 
   config.home-manager.sharedModules = [ ] ++ optionals (cfg.plasma-manager.enable) [
-    <plasma-manager/modules>
+    #<plasma-manager/modules>
+    "${sources.plasma-manager}/modules"
     ./desktop_environments/plasma/plasma.nix
   ];
 
