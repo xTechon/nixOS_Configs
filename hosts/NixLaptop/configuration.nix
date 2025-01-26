@@ -2,12 +2,19 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
+let
+  sources = import ../../nix/sources.nix;
+  pkgs = import sources.nixpkgs { };
+  lanzaboote = import sources.lanzaboote;
+  #sops-nix = "${sources.sops-nix}/modules/sops";
+in
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      lanzaboote.nixosModules.lanzaboote
       ../../package-list.nix
       ../../modules
       ../../users/daniel.nix
@@ -20,8 +27,16 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
+  # swap systemd-boot EFI boot loader with lanzaboote
+  boot.loader.systemd-boot.enable = lib.mkForce false;
+
+  # secure boot setup
+  boot.initrd.systemd.enable = true;
+  boot.lanzaboote = {
+    enable = true;
+    pkiBundle = "/var/lib/sbctl";
+  };
+
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "NixLaptop"; # Define your hostname.
