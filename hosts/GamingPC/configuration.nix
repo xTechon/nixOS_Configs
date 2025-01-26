@@ -5,30 +5,20 @@
 { config, lib, ... }:
 let
   sources = import ../../nix/sources.nix;
-  sops-nix = "${sources.sops-nix}/modules/sops";
-  #home-manager = import sources.home-manager;
-  #plasma-manager = import sources.plasma-manager;
   pkgs = import sources.nixpkgs { };
+  lanzaboote = import sources.lanzaboote;
+  sops-nix = "${sources.sops-nix}/modules/sops";
 in
 {
   imports =
-
-    /*   let
-      commit = "53c853fb1a7e4f25f68805ee25c83d5de18dc699";
-      in [
-      "${builtins.fetchTarball {
-      url = "https://github.com/Mic92/sops-nix/archive/${commit}.tar.gz";
-      # replace this with an actual hash
-      sha256 = "N9JGWe/T8BC0Tss2Cv30plvZUYoiRmykP7ZdY2on2b0=";
-      }}/modules/sops"
-    ] ++ */
-
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      lanzaboote.nixosModules.lanzaboote
       ../../users/daniel.nix
       ../../package-list.nix
       ../../hardware/gpu/nvidia.nix
+      ../../hardware/tpm.nix
       ../../modules
       ../../secrets/secrets.nix
       sops-nix
@@ -40,14 +30,18 @@ in
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Don't use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = false;
+  boot.loader.systemd-boot.enable = lib.mkForce false;
 
-  #boot.bootspec.enabled = true; # always enabled now
+  # secure boot setup
+  boot.lanzaboote = {
+    enable = true;
+    pkiBundle = "/var/lib/sbctl";
+  };
 
   # GRUB Setup
-  boot.loader.grub.enable = true;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.device = "nodev";
+  boot.loader.grub.enable = lib.mkForce false;
+  #boot.loader.grub.efiSupport = true;
+  #boot.loader.grub.device = "nodev";
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.systemd.enable = true;
