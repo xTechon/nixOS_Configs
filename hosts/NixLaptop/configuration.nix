@@ -56,8 +56,9 @@ in
   };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  services.xserver.enable = false;
   services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
   services.xserver.excludePackages = with pkgs; [ xterm ];
 
   # Enable CUPS to print documents.
@@ -66,6 +67,9 @@ in
   # turn on bluetooth
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
+  
+  # enable Thunderbolt
+  services.hardware.bolt.enable = true;
 
   # Enable sound.
   services.pipewire = {
