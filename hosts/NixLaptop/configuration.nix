@@ -77,6 +77,8 @@ in
     pulse.enable = true;
   };
 
+  hardware.graphics.enable = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
@@ -85,6 +87,8 @@ in
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    linuxKernel.packages.linux_6_13.evdi
+    wifi-qr
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

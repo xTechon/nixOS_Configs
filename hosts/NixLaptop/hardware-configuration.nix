@@ -10,7 +10,11 @@
   boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "rtsx_pci_sdmmc" ];
   boot.initrd.kernelModules = [ "dm-snapshot" ];
   boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [ evdi ];
+  boot.kernelParams = [
+    "i915.force_probe=!9a49"
+    "xe.force_probe=9a49"
+];
 
   boot.initrd.luks.devices."nixos".device = "/dev/disk/by-uuid/b8e398e0-2c23-4559-b54d-144cb0a2627c";
 
