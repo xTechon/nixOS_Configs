@@ -11,7 +11,7 @@ let
     url = "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x827fa8540f6415e2";
     sha256 = "sha256-uqADL61CJMqkDE2wMkdKF9RYgCCF4bM9gUsRhBaXr2o=";
   };
-  sources = import ../nix/sources.nix;
+  sources = import ../npins;
   home-manager = "${sources.home-manager}/nixos";
 in
 {

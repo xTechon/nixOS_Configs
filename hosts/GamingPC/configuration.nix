@@ -4,7 +4,7 @@
 
 { config, lib, ... }:
 let
-  sources = import ../../nix/sources.nix;
+  sources = import ../../npins;
   pkgs = import sources.nixpkgs { };
   lanzaboote = import sources.lanzaboote;
   sops-nix = "${sources.sops-nix}/modules/sops";

@@ -17,6 +17,7 @@
       vscode-runner
       partitionmanager
       plasma-vault
+      purpose # required for the share context menu in dolphin
     ];
 
   # make sure the firefox plasma integration works
