@@ -13,6 +13,7 @@
       krfb
       krdc
       ksshaskpass
+      #kdePackages.ksshaskpass
       plasma-panel-colorizer
       vscode-runner
       partitionmanager

@@ -12,5 +12,6 @@
     nixpkgs-fmt
     openconnect
     niv
+    npins
   ];
 }

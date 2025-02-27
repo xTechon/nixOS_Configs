@@ -30,6 +30,7 @@
         ];
       })
       python312Packages.python-lsp-server
+      sourcegit
     ];
   
   # neovim
