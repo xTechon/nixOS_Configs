@@ -1,7 +1,4 @@
-# run the following commands before module usage
-# sudo nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-# sudo nix-channel --add https://github.com/nix-community/plasma-manager/archive/trunk.tar.gz plasma-manager
-# sudo nix-channel --update
+# make sure npins has dependency before usage
 { lib, pkgs, config, ... }:
 
 with lib;
@@ -31,13 +28,11 @@ in
   };
 
   imports = [
-    #<home-manager/nixos>
     home-manager
   ];
 
 
   config.home-manager.sharedModules = [ ] ++ optionals (cfg.plasma-manager.enable) [
-    #<plasma-manager/modules>
     "${sources.plasma-manager}/modules"
     ./desktop_environments/plasma/plasma.nix
   ];

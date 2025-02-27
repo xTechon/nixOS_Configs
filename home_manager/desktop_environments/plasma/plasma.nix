@@ -26,6 +26,8 @@
         wobblyWindows.enable = true;
         shakeCursor.enable = false;
       };
+      virtualDesktops.number = 4;
+      virtualDesktops.rows = 2;
     };
   };
 
