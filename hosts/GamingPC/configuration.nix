@@ -24,6 +24,8 @@ in
       sops-nix
       # use home-manager
       ../../home_manager/daniel.nix
+      ../../servers/nginx.nix
+      ../../servers/gitea.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
