@@ -8,9 +8,9 @@
         "repo": "home-manager"
       },
       "branch": "master",
-      "revision": "343646e092696d94b6f22b6875ae685756fd4cf0",
-      "url": "https://github.com/nix-community/home-manager/archive/343646e092696d94b6f22b6875ae685756fd4cf0.tar.gz",
-      "hash": "07wb85vd5vagk744wmzhv3yvn4wrzq3j5b1j76lrl62w1fzg6kz9"
+      "revision": "486b066025dccd8af7fbe5dd2cc79e46b88c80da",
+      "url": "https://github.com/nix-community/home-manager/archive/486b066025dccd8af7fbe5dd2cc79e46b88c80da.tar.gz",
+      "hash": "0n51z7xnndcm3cvkw30nfiy0vw50d4if961jnwip4513sabfpx43"
     },
     "lanzaboote": {
       "type": "Git",
@@ -20,9 +20,9 @@
         "repo": "lanzaboote"
       },
       "branch": "master",
-      "revision": "6321bc060d757c137c1fbae2057c7e941483878f",
-      "url": "https://github.com/nix-community/lanzaboote/archive/6321bc060d757c137c1fbae2057c7e941483878f.tar.gz",
-      "hash": "0fz5s4a1f347iq55mk4cw716x6n1h25v6ici8665bbc6ldpb3j63"
+      "revision": "3a3ed972151121c8b159eb40e0be21146270e73b",
+      "url": "https://github.com/nix-community/lanzaboote/archive/3a3ed972151121c8b159eb40e0be21146270e73b.tar.gz",
+      "hash": "1rff1vrsbhg59zrh1jvp0lpjz036wfi04i039fhwz2s0xxfhcs21"
     },
     "nixpkgs": {
       "type": "Git",
@@ -32,9 +32,9 @@
         "repo": "nixpkgs"
       },
       "branch": "nixos-unstable",
-      "revision": "5135c59491985879812717f4c9fea69604e7f26f",
-      "url": "https://github.com/NixOS/nixpkgs/archive/5135c59491985879812717f4c9fea69604e7f26f.tar.gz",
-      "hash": "09qy7zv80bkd9ighsw0bdxjq70dw3qjnyvg7il1fycrsgs5x1gan"
+      "revision": "d69ab0d71b22fa1ce3dbeff666e6deb4917db049",
+      "url": "https://github.com/NixOS/nixpkgs/archive/d69ab0d71b22fa1ce3dbeff666e6deb4917db049.tar.gz",
+      "hash": "078dp4099n4dygkyax8x828njahwry3zq23mvvwmmbzlzfm55dck"
     },
     "plasma-manager": {
       "type": "Git",
@@ -56,9 +56,9 @@
         "repo": "sops-nix"
       },
       "branch": "master",
-      "revision": "07af005bb7d60c7f118d9d9f5530485da5d1e975",
-      "url": "https://github.com/Mic92/sops-nix/archive/07af005bb7d60c7f118d9d9f5530485da5d1e975.tar.gz",
-      "hash": "1r9ism27mhjwx9hhj2p10s051z5p0czgjdi04dm7w3kl69xhd47c"
+      "revision": "3f2412536eeece783f0d0ad3861417f347219f4d",
+      "url": "https://github.com/Mic92/sops-nix/archive/3f2412536eeece783f0d0ad3861417f347219f4d.tar.gz",
+      "hash": "05rr1x1nrvy80ma8mryvlc8q2a22mwlp1yhacayymsgkj94ycmzn"
     }
   },
   "version": 3
