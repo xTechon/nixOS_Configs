@@ -34,7 +34,8 @@
     appName = "My awesome Gitea server"; # Give the site a name
     database = {
       type = "postgres";
-      passwordFile = config.sops.secrets."postgres/gitea_dbpass".path;
+      #passwordFile = config.sops.secrets."postgres/gitea_dbpass".path;
+      password = "12345";
     };
     settings.server = {
       DOMAIN = "git.my-domain.tld";
