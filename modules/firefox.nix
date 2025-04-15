@@ -72,6 +72,11 @@
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
             installation_mode = "force_installed";
           };
+          # user agent switcher
+          "{a6c4a591-f1b2-4f03-b3ff-767e5bedf4e7}" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/user-agent-string-switcher/latest.xpi";
+            installation_mode = "force_installed";
+          };
           # Simple Tab Groups
           "simple-tab-groups@drive4ik" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/simple-tab-groups/latest.xpi";
