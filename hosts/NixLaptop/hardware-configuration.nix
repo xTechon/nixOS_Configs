@@ -5,6 +5,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ../../hardware/gpu/tiger-lake-gpu.nix
     ../../hardware/tpm.nix
+    ../../hardware/displaylink_docks.nix
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "rtsx_pci_sdmmc" ];
