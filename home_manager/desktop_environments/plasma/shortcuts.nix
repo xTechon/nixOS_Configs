@@ -33,7 +33,7 @@
       "Kill Window" = "Meta+Ctrl+Esc";
       "MoveMouseToCenter" = "Meta+F6";
       "MoveMouseToFocus" = "Meta+F5";
-      "Overview" = "Meta+W";
+      "Overview" = "Meta+Tab";
       "Show Desktop" = "Meta+D";
       "Suspend Compositing" = "Alt+Shift+F12";
       "Switch One Desktop Down" = "Meta+Ctrl+Down";
