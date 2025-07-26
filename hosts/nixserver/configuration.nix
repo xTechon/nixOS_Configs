@@ -19,6 +19,8 @@ in
       ../../modules/sshd.nix
       ../../users
       ../../package-list.nix
+      ../../virtualization/virt.nix
+      ../../virtualization/k3s.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
