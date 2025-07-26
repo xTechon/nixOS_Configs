@@ -3,15 +3,22 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 { config, lib, pkgs, ... }:
+let
+  sources = import ../../npins;
+  pkgs = import sources.nixpkgs { };
+  #lanzaboote = import sources.lanzaboote;
+  #sops-nix = "${sources.sops-nix}/modules/sops";
+in
 
 {
   imports =
     [
       # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
-      /etc/nixos/modules/sshd.nix
-      /etc/nixos/users
-      /etc/nixos/package-list.nix
+      ./hardware-configuration.nix
+      ../../modules/base-apps.nix
+      ../../modules/sshd.nix
+      ../../users
+      ../../package-list.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
