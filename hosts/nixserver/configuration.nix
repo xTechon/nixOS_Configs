@@ -21,8 +21,8 @@ in
       ../../users
       ../../package-list.nix
       #(import ../../virtualization/kubes-networking.nix {interface = "eno1"; })
-      #../../virtualization/k3s.nix
-      ../../virtualization/kubes-master.nix
+      ../../virtualization/k3s.nix
+      #../../virtualization/kubes-master.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
