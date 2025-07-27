@@ -4,9 +4,9 @@
   networking.hostName = "nixserver-master"; # Define your hostname.
   networking.useDHCP = false;
   
-  systemd.network = {
-    enable = true;
-    
+  systemd.network.enable = true;
+  
+  systemd.network.networks = {
       "10-eno1" = {
         # TODO(you): update `enp2s0` to your NIC's interface (run `ifconfig`)
         matchConfig.Name = "eno1";
