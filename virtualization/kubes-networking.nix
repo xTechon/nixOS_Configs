@@ -1,5 +1,5 @@
 # from: https://joshrosso.com/c/nix-k8s/
-{ config, lib, pkgs, ... }:
+{ interface, ... }: { config, lib, pkgs, ... }:
 {
   boot.kernelModules = [ "kvm-intel" "kvm-amd" ];
 
@@ -21,9 +21,9 @@
     networks = {
       # TODO(you): update `30-enp2s0` to your NIC's interface (run `ifconfig`)
       # Connect the bridge ports to the bridge
-      "30-enp2s0" = {
+      "30-${interface}" = {
         # TODO(you): update `enp2s0` to your NIC's interface (run `ifconfig`)
-        matchConfig.Name = "enp2s0";
+        matchConfig.Name = interface;
         networkConfig.Bridge = "br0";
         linkConfig.RequiredForOnline = "enslaved";
       };
@@ -43,12 +43,19 @@
   # required by libvirtd
   security.polkit.enable = true;
 
+
   environment.systemPackages = with pkgs; [
+    neovim
+    wget
+    jq
+    curl
     virt-manager
+    htop
     prometheus
     prometheus-node-exporter
     prometheus-process-exporter
-
   ];
+  
+  networking.firewall.enable = false;
 
 }
