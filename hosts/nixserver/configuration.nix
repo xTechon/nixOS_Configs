@@ -15,7 +15,7 @@ in
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./networking.nix
+      ./network.nix
       ../../modules/base-apps.nix
       ../../modules/sshd.nix
       ../../users
