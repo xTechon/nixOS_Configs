@@ -5,6 +5,8 @@
   networking.useDHCP = false;
   
   systemd.network.enable = true;
+
+  networking.firewall.enable = false;
   
   systemd.network.networks = {
       "10-eno1" = {
