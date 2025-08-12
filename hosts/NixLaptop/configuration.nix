@@ -87,7 +87,7 @@ in
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    linuxKernel.packages.linux_6_13.evdi
+    #linuxKernel.packages.linux_6_13.evdi
     wifi-qr
   ];
 
