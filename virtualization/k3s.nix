@@ -10,9 +10,13 @@
     8472 # k3s, flannel: required if using multi-node for inter-node networking
   ];
   services.etcd.enable = true;
-  services.k3s.enable = true;
-  services.k3s.role = "server";
-  services.k3s.extraFlags = toString [
-    # "--debug" # Optionally add additional args to k3s
-  ];
+  services.k3s = {
+    enable = true;
+    role = "server";
+    extraFlags = toString [
+      # "--debug" # Optionally add additional args to k3s
+      "--embedded-registry"
+      "--disable metrics-server"
+    ];
+  };
 }

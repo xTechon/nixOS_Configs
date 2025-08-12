@@ -6,7 +6,13 @@
   
   systemd.network.enable = true;
 
-  networking.firewall.enable = false;
+  networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [
+    80  # HTTP
+    443 # HTTPS
+    5001
+    9100 # Node exporter
+  ];
   
   systemd.network.networks = {
       "10-eno1" = {

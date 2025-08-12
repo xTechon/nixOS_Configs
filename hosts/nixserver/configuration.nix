@@ -1,7 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
+# very helpful: https://github.com/rorosen/k3s-nix/tree/main
 { config, lib, pkgs, ... }:
 let
   sources = import ../../npins;
@@ -20,6 +17,7 @@ in
       ../../modules/sshd.nix
       ../../users
       ../../package-list.nix
+      ../../servers/gitea.nix  
       #(import ../../virtualization/kubes-networking.nix {interface = "eno1"; })
       ../../virtualization/k3s.nix
       #../../virtualization/kubes-master.nix
