@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
     freecad-wayland
     blender
-    #gimp-with-plugins
+    gimp3-with-plugins
     inkscape-with-extensions
     krita
   ];
