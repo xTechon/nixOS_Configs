@@ -29,7 +29,7 @@
       "Expose" = "Ctrl+F9";
       "ExposeAll" = [ "Ctrl+F10" "Launch (C),Ctrl+F10" "Launch (C),Toggle Present Windows (All desktops)" ];
       "ExposeClass" = "Ctrl+F7";
-      "Grid View" = "Meta+Tab,Meta+G,Toggle Grid View";
+      "Grid View" = "Meta+G,Toggle Grid View";
       "Kill Window" = "Meta+Ctrl+Esc";
       "MoveMouseToCenter" = "Meta+F6";
       "MoveMouseToFocus" = "Meta+F5";
