@@ -16,6 +16,7 @@ in
       ./hardware-configuration.nix
       lanzaboote.nixosModules.lanzaboote
       ../../package-list.nix
+      ../../repo-perms.nix
       ../../modules
       ../../users/daniel.nix
       # use home-manager
@@ -40,8 +41,6 @@ in
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "NixLaptop"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
@@ -55,11 +54,11 @@ in
   #   useXkbConfig = true; # use xkb.options in tty.
   };
 
-  # Enable the X11 windowing system.
+  # disable the X11 windowing system.
   services.xserver.enable = false;
+  services.xserver.excludePackages = with pkgs; [ xterm ];
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
-  services.xserver.excludePackages = with pkgs; [ xterm ];
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -82,12 +81,9 @@ in
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim 
     wget
-    #linuxKernel.packages.linux_6_13.evdi
     wifi-qr
   ];
 
