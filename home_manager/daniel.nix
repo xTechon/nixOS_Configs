@@ -75,7 +75,9 @@ in
         signByDefault = true;
       };
       extraConfig = {
-        safe.directory = [ "/etc/nixos" ];
+        safe.directory = [ 
+          "/etc/nixos" 
+          "/etc/nixos/secrets"];
       };
     };
     programs.gpg = {
