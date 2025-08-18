@@ -3,7 +3,7 @@
 {
 
   # make sure containers user/group exists
-  imports = [ "/etc/nixos/users/containers.nix" ];
+  imports = [ "../users/containers.nix" ];
 
   # make sure folders for volumes exist with permisions
   systemd.tmpfiles.rules = [
