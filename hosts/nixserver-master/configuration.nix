@@ -18,6 +18,7 @@ in
       ../../users
       ../../package-list.nix
       ../../servers/gitea.nix  
+      ../../servers/unifi.nix
       #(import ../../virtualization/kubes-networking.nix {interface = "eno1"; })
       ../../virtualization/k3s.nix
       #../../virtualization/kubes-master.nix
@@ -80,7 +81,6 @@ in
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
-    unifi
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
