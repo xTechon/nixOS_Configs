@@ -5,6 +5,6 @@
     openFirewall = true;
   };
   networking.firewall.allowedTCPPorts = [
-    8443 # allow remote login
+    8443 # allow remote login (web interface)
   ];
 }

@@ -1,4 +1,4 @@
-{ ... }:
+{ DOMAIN, ... }:
 {
   services.gitlab = {
     enable = true;
@@ -30,7 +30,7 @@
     };
   };
 
-  services.nginx.virtualHosts."git.example.com" = {
+  services.nginx.virtualHosts."git.${DOMAIN}" = {
     enableACME = false;
     forceSSL = true;
     locations."/".proxyPass = "http://unix:/run/gitlab/gitlab-workhorse.socket";

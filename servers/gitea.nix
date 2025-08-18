@@ -1,8 +1,8 @@
 # https://ayats.org/blog/gitea-drone
 # https://mcwhirter.com.au/craige/blog/2019/Deploying_Gitea_on_NixOS/
-{ config, ... }:
+{ config, DOMAIN, ... }:
 {
-  services.nginx.virtualHosts."git.my-domain.tld" = {
+  services.nginx.virtualHosts."git.${DOMAIN}" = {
     enableACME = false;
     forceSSL = false;
     locations."/" = {
@@ -38,7 +38,7 @@
       password = "12345";
     };
     settings.server = {
-      DOMAIN = "git.my-domain.tld";
+      DOMAIN = "git.${DOMAIN}";
       ROOT_URL = "https://git.my-domain.tld/";
       HTTP_PORT = 3001;
     };
