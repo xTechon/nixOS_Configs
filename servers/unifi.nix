@@ -1,10 +1,21 @@
-{...}:
+{ DOMAIN, ... }:
 {
   services.unifi = {
     enable = true;
     openFirewall = true;
   };
-  networking.firewall.allowedTCPPorts = [
-    8443 # allow remote login (web interface)
+
+  # open the port for the web interface
+  networking.firewall."lo".allowedTCPPorts = [
+    8443
   ];
+
+  # make a subdomain for the unifi web interface
+  services.nginx.virtualHosts."unifi.${DOMAIN}" = {
+    enableACME = false;
+    forceSSL = false;
+    locations."/" = {
+      proxyPass = "http://localhost:8443/";
+    };
+  };
 }
