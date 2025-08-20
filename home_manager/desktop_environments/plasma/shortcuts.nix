@@ -104,7 +104,7 @@
     plasmashell = {
       "activate application launcher" = [ "Meta,Meta" "Alt+F1,Activate Application Launcher" ];
       "activate task manager entry 1" = "Meta+1";
-      "activate task manager entry 10" = "none,Meta+0,Activate Task Manager Entry 10";
+      "activate task manager entry 10" = "none,Activate Task Manager Entry 10";
       "activate task manager entry 2" = "Meta+2";
       "activate task manager entry 3" = "Meta+3";
       "activate task manager entry 4" = "Meta+4";
