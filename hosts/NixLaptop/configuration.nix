@@ -20,6 +20,7 @@ in
       ../../repo-perms.nix
       ../../modules
       ../../users/daniel.nix
+      (import ../../servers/unifi.nix { DOMAIN = "localhost"; })
       # use home-manager
       ../../home_manager/daniel.nix
     ];
