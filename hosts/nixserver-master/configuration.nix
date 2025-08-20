@@ -18,7 +18,7 @@ in
       ../../users
       ../../package-list.nix
       ../../servers/gitea.nix  
-      ../../servers/unifi.nix
+      ../../servers/unifi.nix { DOMAIN = "nixserver"; }
       #(import ../../virtualization/kubes-networking.nix {interface = "eno1"; })
       ../../virtualization/k3s.nix
       #../../virtualization/kubes-master.nix
