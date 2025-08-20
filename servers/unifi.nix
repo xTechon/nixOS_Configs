@@ -6,7 +6,7 @@
   };
 
   # open the port for the web interface
-  networking.firewall."lo".allowedTCPPorts = [
+  networking.firewall.interfaces."lo".allowedTCPPorts = [
     8443
   ];
 
