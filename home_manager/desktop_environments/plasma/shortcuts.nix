@@ -70,7 +70,7 @@
       "Window to Next Screen" = "Meta+Shift+Right";
       "Window to Previous Screen" = "Meta+Shift+Left";
       "view_actual_size" = "Meta+0";
-      "view_zoom_in" = [ "Meta++" "Meta+=,Meta++" "Meta+=,Zoom In" ];
+      "view_zoom_in" = [ "Meta+=" "Meta+=,Zoom In" ];
       "view_zoom_out" = "Meta+-";
     };
 

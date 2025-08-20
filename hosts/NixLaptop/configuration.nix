@@ -7,7 +7,7 @@ let
   sources = import ../../npins;
   pkgs = import sources.nixpkgs { };
   lanzaboote = import sources.lanzaboote;
-  #sops-nix = "${sources.sops-nix}/modules/sops";
+  sops-nix = "${sources.sops-nix}/modules/sops";
 in
 
 {
@@ -15,6 +15,7 @@ in
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       lanzaboote.nixosModules.lanzaboote
+      sops-nix
       ../../package-list.nix
       ../../repo-perms.nix
       ../../modules
