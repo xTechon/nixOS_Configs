@@ -12,7 +12,7 @@
 
   # make a subdomain for the unifi web interface
   services.nginx.virtualHosts."unifi.${DOMAIN}" = {
-    enableACME = true;
+    enableACME = false;
     forceSSL = true;
     locations."/" = {
       proxyPass = "http://localhost:8443/";
