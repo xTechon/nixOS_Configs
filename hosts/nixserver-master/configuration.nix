@@ -20,7 +20,7 @@ in
       ../../package-list.nix
       #../../servers/gitea.nix  
       ../../servers/nginx.nix
-      (import ../../servers/unifi.nix { DOMAIN = "nixserver-master"; })
+      (import ../../servers/unifi.nix { DOMAIN = "the-lab.com"; })
       #(import ../../virtualization/kubes-networking.nix {interface = "eno1"; })
       ../../virtualization/k3s.nix
       #../../virtualization/kubes-master.nix
