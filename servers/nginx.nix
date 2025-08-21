@@ -1,4 +1,4 @@
-{...}:
+{ ... }:
 {
 
   networking.firewall.allowedTCPPorts = [ 80 443 ];
@@ -10,4 +10,10 @@
     recommendedProxySettings = true;
     recommendedTlsSettings = true;
   };
+
+  security.acme = {
+    acceptTerms = true;
+    defaults.email = "danielhiromoto@outlook.com";
+  };
+
 }

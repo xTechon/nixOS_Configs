@@ -21,7 +21,7 @@ in
       ../../modules
       ../../users/daniel.nix
       ../../servers/nginx.nix
-      (import ../../servers/unifi.nix { DOMAIN = "localhost"; })
+      (import ../../servers/unifi.nix { DOMAIN = "localhost.com"; })
       # use home-manager
       ../../home_manager/daniel.nix
     ];
