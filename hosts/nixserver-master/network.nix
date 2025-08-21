@@ -12,6 +12,7 @@
     443 # HTTPS
     5001
     9100 # Node exporter
+    8443 # allow for now to get unifi working
   ];
   
   systemd.network.networks = {
