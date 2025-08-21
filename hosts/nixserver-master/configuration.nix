@@ -14,6 +14,7 @@ in
       ./hardware-configuration.nix
       ./network.nix
       ../../modules/base-apps.nix
+      ../../modules/pinning.nix
       ../../modules/sshd.nix
       ../../users
       ../../package-list.nix
