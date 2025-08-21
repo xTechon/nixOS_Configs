@@ -17,7 +17,7 @@ in
       ../../modules/sshd.nix
       ../../users
       ../../package-list.nix
-      ../../servers/gitea.nix  
+      #../../servers/gitea.nix  
       ../../servers/nginx.nix
       (import ../../servers/unifi.nix { DOMAIN = "nixserver-master"; })
       #(import ../../virtualization/kubes-networking.nix {interface = "eno1"; })
