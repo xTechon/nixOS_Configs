@@ -14,5 +14,8 @@
       haruna
       #logseq
       qbittorrent
+      zoom-us
+      _1password-gui
+      _1password-cli
     ];
 }
