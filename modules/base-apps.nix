@@ -11,6 +11,7 @@
     nix-search-cli
     nixpkgs-fmt
     openconnect
+    openconnect_openssl
     npins
   ];
 }
