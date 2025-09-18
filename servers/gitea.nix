@@ -1,6 +1,6 @@
 # https://ayats.org/blog/gitea-drone
 # https://mcwhirter.com.au/craige/blog/2019/Deploying_Gitea_on_NixOS/
-{ config, DOMAIN, ... }:
+{ DOMAIN }: { config, ... }:
 {
   services.nginx.virtualHosts."git.${DOMAIN}" = {
     enableACME = false;

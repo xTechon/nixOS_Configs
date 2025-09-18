@@ -26,7 +26,7 @@ in
       # use home-manager
       ../../home_manager/daniel.nix
       ../../servers/nginx.nix
-      ../../servers/gitea.nix
+      (import ../../servers/gitea.nix { DOMAIN = "localhost.com"; })
     ];
 
   nixpkgs.config.allowUnfree = true;
