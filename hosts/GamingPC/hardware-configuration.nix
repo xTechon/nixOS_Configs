@@ -47,11 +47,21 @@
   fileSystems."/mnt/Windows_extra" = {
     device = "/dev/disk/by-uuid/662A2CC536A22B8B";
     fsType = "ntfs";
+    options = [
+	"default"
+	"users"
+	"nofail"
+];
   };
 
   fileSystems."/mnt/Linux_extra" = {
     device = "/dev/disk/by-uuid/76fbbf1a-2113-47ab-94e6-1dc0af53dc04";
     fsType = "ext4";
+    options = [
+	"default"
+	"users"
+	"nofail"
+];
   };
 
   swapDevices =
