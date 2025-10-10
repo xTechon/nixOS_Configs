@@ -73,12 +73,6 @@ in
   # enable Thunderbolt
   services.hardware.bolt.enable = true;
 
-  # Enable sound.
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-
   hardware.graphics.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
