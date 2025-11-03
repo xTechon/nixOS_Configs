@@ -7,8 +7,9 @@ https://oddlama.org/blog/bypassing-disk-encryption-with-tpm2-unlock/#crude-imple
 https://forge.lel.lol/patrick/nix-config/src/commit/ab2cb2b4d554040ce208fc60624fe729a9d5e32b/modules/ensure-pcr.nix
 */
 # Commands:
+# bootctl status
 # sudo systemd-cryptenroll --tpm2-device=list
-# sudo systemd-cryptenroll --tpm2-pcrs=0+2+7+12 --wipe-slot=tpm2 [DEVICE]
+# sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+2+7+12 --wipe-slot=tpm2 [DEVICE]
 { pkgs, ... }:
 {
   security.tpm2.enable = true;
