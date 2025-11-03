@@ -18,10 +18,8 @@ in
       ../../modules/sshd.nix
       ../../users
       ../../package-list.nix
-      #../../servers/gitea.nix  
       ../../servers/nginx.nix
-      (import ../../servers/unifi.nix { DOMAIN = "nixserver-master.com"; })
-      #(import ../../virtualization/kubes-networking.nix {interface = "eno1"; })
+      #(import ../../servers/unifi.nix { DOMAIN = "nixserver-master.com"; })
       ../../virtualization/k3s.nix
       #../../virtualization/kubes-master.nix
     ];
