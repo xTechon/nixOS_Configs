@@ -26,6 +26,8 @@ in
       # use home-manager
       ../../home_manager/daniel.nix
       ../../servers/nginx.nix
+      ../../creation/audio_editing.nix
+      ../../creation/video_editing.nix
       (import ../../servers/gitea.nix { DOMAIN = "localhost.com"; })
     ];
 
