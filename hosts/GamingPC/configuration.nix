@@ -25,6 +25,7 @@ in
       sops-nix
       # use home-manager
       ../../home_manager/daniel.nix
+      ../../virtualization/vmhosting.nix
       ../../servers/nginx.nix
       ../../creation/audio_editing.nix
       ../../creation/video_editing.nix
