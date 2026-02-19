@@ -1,3 +1,4 @@
+# from PR not yet merged: https://github.com/NixOS/nixpkgs/pull/406532
 {
   lib,
   fetchurl,
