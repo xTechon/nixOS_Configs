@@ -39,5 +39,10 @@
     #networkmanager-strongswan
     networkmanager-vpnc
   ];
+  
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
+  };
 
 }
