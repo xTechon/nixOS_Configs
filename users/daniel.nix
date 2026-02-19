@@ -17,6 +17,7 @@
       "containers"
       "tss" # tss group has access to TPM devices
       "libvirtd"
+      "storage" # userspace mount/unmount drives in kde
     ];
     home = "/home/daniel";
     openssh.authorizedKeys.keys = [
