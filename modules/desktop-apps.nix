@@ -17,7 +17,7 @@
       zoom-us
       _1password-gui
       _1password-cli
-      
-      (pkgs.callPackage ../Extra_pkgs/deskthing.nix { })
+
     ];
+
 }
