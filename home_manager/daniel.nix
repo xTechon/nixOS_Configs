@@ -68,18 +68,22 @@ in
 
     programs.git = {
       enable = true;
-      userEmail = "danielhiromoto@outlook.com";
-      userName = "W. Daniel Hiromoto";
       signing = {
         key = "827FA8540F6415E2"; #just the key ID, will have to upload key manually
         signByDefault = true;
       };
-      extraConfig = {
-        safe.directory = [ 
-          "/etc/nixos" 
-          "/etc/nixos/secrets"];
+      settings = {
+        user = {
+          name = "W. Daniel Hiromoto";
+          email = "danielhiromoto@outlook.com";
+        };
+        safe.directory = [
+          "/etc/nixos"
+          "/etc/nixos/secrets"
+        ];
       };
     };
+
     programs.gpg = {
       enable = true;
       publicKeys = [
