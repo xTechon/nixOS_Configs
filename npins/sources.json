@@ -9,9 +9,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "0562fef070a1027325dd4ea10813d64d2c967b39",
-      "url": "https://github.com/nix-community/home-manager/archive/0562fef070a1027325dd4ea10813d64d2c967b39.tar.gz",
-      "hash": "09a1bqayhm4a67v2y20p5pp5ji42nmk47jka25cy1jagdaqi8xnz"
+      "revision": "c6ed3eab64d23520bcbb858aa53fe2b533725d4a",
+      "url": "https://github.com/nix-community/home-manager/archive/c6ed3eab64d23520bcbb858aa53fe2b533725d4a.tar.gz",
+      "hash": "0islsx5alazr6i0m6ml1zg2q14g19njk73rcmbxx7wg80s80842v"
     },
     "lanzaboote": {
       "type": "Git",
@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "88b8a563ff5704f4e8d8e5118fb911fa2110ca05",
-      "url": "https://github.com/nix-community/lanzaboote/archive/88b8a563ff5704f4e8d8e5118fb911fa2110ca05.tar.gz",
-      "hash": "016pgbh27zjwbzq1li1d4r40b37vwmnz8khh04vspd5gw91szzi1"
+      "revision": "5e9380994665ef66c87ab8e22c913ff837174ce4",
+      "url": "https://github.com/nix-community/lanzaboote/archive/5e9380994665ef66c87ab8e22c913ff837174ce4.tar.gz",
+      "hash": "05qznysmknbxnn3mjvfyzmpilmwrmbq3qv500cfyy6h19sfyy34x"
     },
     "nixpkgs": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "nixos-unstable",
       "submodules": false,
-      "revision": "ae814fd3904b621d8ab97418f1d0f2eb0d3716f4",
-      "url": "https://github.com/NixOS/nixpkgs/archive/ae814fd3904b621d8ab97418f1d0f2eb0d3716f4.tar.gz",
-      "hash": "06zgfllrpfv0wsr1kl9b06kz8b3rc6x29zn842nvhcaj9c68q6k1"
+      "revision": "0182a361324364ae3f436a63005877674cf45efb",
+      "url": "https://github.com/NixOS/nixpkgs/archive/0182a361324364ae3f436a63005877674cf45efb.tar.gz",
+      "hash": "1i04bclcxsqhk172wvj74fcgk2sd7037mi9bgxp7jdx42886bl6h"
     },
     "plasma-manager": {
       "type": "Git",
@@ -48,9 +48,9 @@
       },
       "branch": "trunk",
       "submodules": false,
-      "revision": "6296d7100cc84b2ff732b7c103a50c2856974cf6",
-      "url": "https://github.com/nix-community/plasma-manager/archive/6296d7100cc84b2ff732b7c103a50c2856974cf6.tar.gz",
-      "hash": "0wkp9x777z9yap53clhz2a1pv64cdpgkvwnhr0iarrimz6x6bf2m"
+      "revision": "44b928068359b7d2310a34de39555c63c93a2c90",
+      "url": "https://github.com/nix-community/plasma-manager/archive/44b928068359b7d2310a34de39555c63c93a2c90.tar.gz",
+      "hash": "0nsi3zl8wjsh3gchz306y4jahy1pvhp559yp766dqyc0pha44r6p"
     },
     "sops-nix": {
       "type": "Git",
@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "5a7d18b5c55642df5c432aadb757140edfeb70b3",
-      "url": "https://github.com/Mic92/sops-nix/archive/5a7d18b5c55642df5c432aadb757140edfeb70b3.tar.gz",
-      "hash": "1dk0kjms9a6in9flaz4pxrlngxj235xivgwcy9bvw60yy3brxvbr"
+      "revision": "d7755d820f5fa8acf7f223309c33e25d4f92e74f",
+      "url": "https://github.com/Mic92/sops-nix/archive/d7755d820f5fa8acf7f223309c33e25d4f92e74f.tar.gz",
+      "hash": "1ra9wa9c5a2nzw3flwjlihfhhs46gxw1197cmbi4qr1kxcjrb6rh"
     }
   },
   "version": 5

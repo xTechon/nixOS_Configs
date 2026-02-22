@@ -6,7 +6,7 @@
 let
   sources = import ../../npins;
   pkgs = import sources.nixpkgs { };
-  lanzaboote = import sources.lanzaboote;
+  lanzaboote = import sources.lanzaboote { inherit pkgs; };
   sops-nix = "${sources.sops-nix}/modules/sops";
 in
 {
