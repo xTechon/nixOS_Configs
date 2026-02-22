@@ -29,6 +29,8 @@
       virtualDesktops.number = 4;
       virtualDesktops.rows = 2;
     };
+    
+    input.keyboard.numlockOnStartup = "on";
   };
 
 }
