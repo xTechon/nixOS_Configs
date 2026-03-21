@@ -20,6 +20,7 @@ in
       ../../repo-perms.nix
       ../../hardware/gpu/nvidia.nix
       ../../hardware/tpm.nix
+      ../../hardware/bluetooth.nix
       ../../modules
       ../../secrets/secrets.nix
       sops-nix
@@ -66,8 +67,8 @@ in
   boot.initrd.systemd.enable = true;
 
   # turn on bluetooth
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
+  #hardware.bluetooth.enable = true;
+  #hardware.bluetooth.powerOnBoot = true;
 
   networking.hostName = "GamingPC"; # Define your hostname.
   # Pick only one of the below networking options.
