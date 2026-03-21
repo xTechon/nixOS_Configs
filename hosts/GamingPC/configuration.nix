@@ -30,6 +30,7 @@ in
       ../../creation/audio_editing.nix
       ../../creation/video_editing.nix
       (import ../../servers/gitea.nix { DOMAIN = "localhost.com"; })
+      ../../hardware/tb16_macropad.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
